@@ -1,16 +1,16 @@
 # Sparse VFA T<sub>1</sub> by OMP
 
-Sparse MRI Acquisition Variable Flip Angle (VFA) T1 Mapping using an Orthogonal Matching Pursuit (OMP) algorithm. 
+Sparse MRI Acquisition Variable Flip Angle (VFA) T<sub>1</sub> Mapping using an Orthogonal Matching Pursuit (OMP) algorithm. 
 
-This code investigates the effect of Orthogonal Matching Pursuit compressed censing processing applied to noisy 2D VFA data 
-and its effect on T<sub>1</sub> values. 
+This code investigates the effect of Orthogonal Matching Pursuit compressed sensing image reconstruction algorithm applied 
+to noisy 2D VFA data and its effect on T<sub>1</sub> values. 
 
 The algorithm uses complete dictionnaries; the dictionnary is NOT sparsified using a K-SVD algorithm on training data (but 
 feel free to add this feature if you want/need it).
 
-It currently uses a modified Shepp-Logan phantom, but the could should be easily modifyable to any T1 maps. The measurements 
-magnitude are calculated from T1 maps, inverse fourier transformed to K-Space and retroactively undersampled prior to any
-OMP reconstruction.
+The code currently uses a modified Shepp-Logan phantom, but the could should be easily modifyable to any T<sub>1</sub> maps. 
+The measurements magnitude are calculated from T1 maps, inverse fourier transformed to K-Space and retroactively
+under-sampled prior to any OMP reconstruction.
 
 ## Requirements
 
@@ -44,7 +44,8 @@ Not all the code was written by the author of this repository.
 
 2. utils/ricernd.m originates from [Ged Ridgway's Matlab Rician package](https://www.mathworks.com/matlabcentral/fileexchange/14237-ricerician-distribution)
 
-The idea of reconstructing sparsely acquire T1 mapping MRI data using OMP was originally published in the following papers:
+The idea of reconstructing sparsely acquire T<sub>1</sub> mapping MRI data using OMP was originally published in the
+following papers:
 
 *Doneva, M., Börnert, P., Eggers, H., Stehning, C., Sénégas, J. and Mertins, A. (2010), Compressed sensing reconstruction for magnetic resonance parameter mapping. Magn Reson Med, 64: 1114–1120. doi: 10.1002/mrm.22483*
 
